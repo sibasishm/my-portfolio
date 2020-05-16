@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+
+:root {
+    --ff-primary: 'Rubik', sans-serif;
+    --ff-secondary: 'DM Mono', monosapce;
+
+    --fw-light: 400;
+    --fw-reg: 500;
+    --fw-bold: 700;
+
+    --clr-light: #fcfcfc;
+    --clr-dark: #303030;
+    --clr-accent: #1974a3;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.25rem;
+        --fs-h2: 3.5rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General properties */
+
+body {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-light);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin: 0
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+.title {
+    margin-bottom: 0.25em;
+}
+
+.title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.subtitle--intro {
+    font-family: var(--ff-secondary);
+    background-color: var(--clr-accent);
+    color: var(--clr-light)
+}
