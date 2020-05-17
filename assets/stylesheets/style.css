@@ -71,12 +71,20 @@ h3 {
     font-size: var(--fs-h3);
 }
 
+.logo {
+    font-family: var(--ff-secondary);
+}
+
 .title {
     margin-bottom: 0.25em;
 }
 
 .title--intro {
     font-weight: var(--fw-reg);
+}
+
+.title--intro strong {
+    display: block;
 }
 
 .subtitle {
