@@ -27,18 +27,20 @@
 				<span class="hamburger"></span>
 			</button>
 			<nav class="nav">
-				<li class="nav__item">
-					<a href="/" class="nav__link">Home</a>
-				</li>
-				<li class="nav__item">
-					<a href="#about" class="nav__link">About me</a>
-				</li>
-				<li class="nav__item">
-					<a href="#works" class="nav__link">My works</a>
-				</li>
-				<li class="nav__item">
-					<a href="#contact" class="nav__link">Contact me</a>
-				</li>
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="/" class="nav__link">Home</a>
+					</li>
+					<li class="nav__item">
+						<a href="#about" class="nav__link">About me</a>
+					</li>
+					<li class="nav__item">
+						<a href="#works" class="nav__link">My works</a>
+					</li>
+					<li class="nav__item">
+						<a href="#contact" class="nav__link">Contact me</a>
+					</li>
+				</ul>
 			</nav>
 		</header>
 
@@ -48,7 +50,10 @@
 				Hi, I am
 				<span class="title--intro__name">Sibasish Mohanty</span>
 			</h1>
-			<p class="subtitle subtitle--intro">
+			<p
+				class="subtitle subtitle--intro"
+				data-labels="full-stack developer, UI/UX designer"
+			>
 				full-stack developer
 			</p>
 			<h2 class="title title--intro">
@@ -64,21 +69,19 @@
 
 		<!-- About -->
 		<section class="about" id="about">
-			<h2 class="title">
-				Nice to meet you.
-			</h2>
-			<div class="about__description">
+			<div class="about__text">
+				<h2 class="title">
+					Nice to meet you.
+				</h2>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Dolore non hic vitae corporis maxime, expedita temporibus
-					quidem enim debitis impedit cum molestias labore et eum
-					natus facere placeat magnam sit.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Dolore non hic vitae corporis maxime, expedita temporibus
-					quidem enim debitis impedit cum molestias labore et eum
-					natus facere placeat magnam sit.
+					My journey started as a freelance graphic designer nearly 4
+					years ago inspired by a beuatiful poster. Since then, I have
+					done remote work for agencies, and collaborated with
+					talented people to create digital products for both business
+					and consumer use. I eventually got into web development with
+					my first job and I have been living, learning and leveling
+					up one day at a time. I believe in creating beautifully
+					simple things, and I love what I do.
 				</p>
 			</div>
 		</section>
@@ -86,7 +89,7 @@
 		<!-- Works -->
 		<section class="works" id="works">
 			<h2 class="title">My works</h2>
-			<p class="subtitle">
+			<p class="subtitle subtitle--works">
 				Here are some of the recent projects I have worked on.
 			</p>
 			<div class="portfolio">
@@ -136,27 +139,34 @@
 		</section>
 
 		<!-- Footer -->
-		<footer id="contact">
-			<a href="mailto:smsibasish@gmail.com" class="footer__link"
+		<footer id="contact" class="footer">
+			<a href="mailto:smsibasish@gmail.com" class="subtitle footer__link"
 				>smsibasish@gmail.com</a
 			>
 			<ul class="social-link">
 				<li class="social-list__item">
-					<a href="#" class="social-list__link">Facebook</a>
+					<a href="#" class="social-list__link"
+						><i class="fab fa-twitter-square fa-2x"></i
+					></a>
 				</li>
 				<li class="social-list__item">
-					<a href="#" class="social-list__link">Twitter</a>
+					<a href="#" class="social-list__link"
+						><i class="fab fa-behance-square fa-2x"></i
+					></a>
 				</li>
 				<li class="social-list__item">
-					<a href="#" class="social-list__link">Behance</a>
+					<a href="#" class="social-list__link"
+						><i class="fab fa-github-square fa-2x"></i
+					></a>
 				</li>
 				<li class="social-list__item">
-					<a href="#" class="social-list__link">Github</a>
-				</li>
-				<li class="social-list__item">
-					<a href="#" class="social-list__link">Linkedin</a>
+					<a href="#" class="social-list__link"
+						><i class="fab fa-linkedin fa-2x"></i
+					></a>
 				</li>
 			</ul>
+			Handcrafted by me &copy; smsibasish
 		</footer>
+		<script src="./assets/index.js"></script>
 	</body>
 </html>
