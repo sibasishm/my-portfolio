@@ -51,7 +51,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     font-weight: var(--fw-light);
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 img {
@@ -66,6 +66,12 @@ a {
 
 section {
     padding: 3em 2em;
+}
+
+@media(min-width: 900px) {
+    section {
+        padding: 4.5em 3em;
+    }
 }
 
 /* Typography */
@@ -121,11 +127,16 @@ h3 {
     display: inline-block;
 }
 
+.subtitle--works {
+    margin-bottom: 2em;
+}
+
 /* Navigation */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    align-items: center;
+    padding: 1em 2em;
 }
 
 .nav {
@@ -161,12 +172,68 @@ header {
     text-decoration: underline;
 }
 
+.hamburger {
+    position: relative;
+    display: block;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 1.75em;
+    height: 3px;
+    border-radius: 1em;
+    background-color: var(--clr-dark);
+    transition: transform 250ms var(--animation-function);
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before {
+    top: 8px;
+}
+
+.hamburger::after {
+    bottom: 8px;
+}
+
 .nav-toggle {
-    z-index: 2
+    padding: 1em;
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    cursor: pointer;
+    right: 1em;
+    z-index: 2;
 }
 
 .nav-open .nav {
     transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    background-color: var(--clr-light);
+    transform: rotate(0.625turn)
+}
+
+.nav-open .hamburger::before {
+    background-color: var(--clr-light);
+    transform: rotate(90deg) translateX(-8px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
 }
 
 .logo {
@@ -214,6 +281,14 @@ header {
     color: var(--clr-light);
     text-align: center;
 }
+
+@media(min-width: 900px) {
+    .about__text {
+        width: 800px;
+        margin: 0 auto;
+    }
+}
+
 
 /* Works */
 .works {
